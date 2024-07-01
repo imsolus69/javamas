@@ -27,14 +27,14 @@ public class StatService {
     }
 
     public int maxSales(long[] sales) {
-        int minMonth = 0;
+        int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[minMonth]) {
-                minMonth = i;
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
         }
-        return minMonth + 1;
+        return maxMonth + 1;
     }
 
     public int countLessThanAvg(long[] sales) {
